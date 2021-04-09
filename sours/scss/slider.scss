@@ -1,0 +1,109 @@
+.slider__img {
+  height: 95vh;
+  width: 100%;
+  background: url("../img/bg_img_01_10.jpg") 0 0/100% 100% no-repeat;
+}
+.slider__content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  max-width: 700px;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.slider__title {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  margin-bottom: 30px;
+  @include adaptiv-value("font-size", 72, 30, 1);
+  @include adaptiv-value("margin-bottom", 30, 15, 1);
+}
+.slider__title span {
+  color: $chocolate;
+}
+.slider__text {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  margin-bottom: 40px;
+  @include adaptiv-value("font-size", 24, 16, 1);
+}
+.slider__btn {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  width: 200px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $chocolate;
+  border-radius: 30px;
+  text-align: center;
+  @include adaptiv-value("width", 200, 130, 1);
+  @include adaptiv-value("height", 46, 36, 1);
+  transition: all 0.2s linear;
+}
+.slider__btn:hover {
+  background-color: darken($chocolate, 10%);
+}
+/*слайдер*/
+.slider {
+  position: relative;
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 38px;
+  right: 50%;
+  transform: translateX(50%);
+}
+.slider .slick-dots li {
+  margin: 0 6px;
+}
+.slider .slick-dots button {
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+
+  background: transparent;
+  border: 2px solid $chocolate;
+
+  border-radius: 50%;
+}
+.slider .slick-dots li.slick-active button {
+  background-color: $chocolate;
+}
+
+@media (max-height: 470px) {
+  .slider__content {
+    top: 25%;
+  }
+  .slider__title {
+    margin-bottom: 15px;
+  }
+  .slider__text {
+    margin-bottom: 15px;
+  }
+  .slider .slick-dots {
+    bottom: 20px;
+  }
+}

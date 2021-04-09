@@ -1,0 +1,113 @@
+.about {
+  background-color: $bg-about;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include adaptiv-value("padding-top", 60, 30, 1);
+  @include adaptiv-value("padding-bottom", 60, 30, 1);
+}
+.about__call-blok {
+  max-width: 1420px;
+  margin: 0 auto;
+  height: 1px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+.about__call-p {
+  position: relative;
+  z-index: 1;
+  margin-top: -86px;
+}
+.about__call {
+  display: flex;
+  justify-content: flex-end;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: $chocolate;
+  transition: all 0.2s linear;
+  @include adaptiv-value(" margin-top", -92, -60, 1);
+  cursor: pointer;
+}
+
+.about__call:hover {
+  background-color: darken($chocolate, 10%);
+}
+.about__call div {
+  width: 65px;
+  height: 65px;
+  background: url("../img/telephone_2229.png") 50% no-repeat;
+}
+.about__title {
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  @include adaptiv-value("font-size", 30, 20, 1);
+  @include adaptiv-value("margin-bottom", 14, 9, 1);
+}
+.about__sub-title {
+  margin-bottom: 45px;
+  @include adaptiv-value("margin-bottom", 45, 20, 1);
+}
+.sub-title {
+  text-align: center;
+  font-size: 14px;
+  color: $sub-title;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include adaptiv-value("font-size", 14, 9, 1);
+}
+.about__row {
+  display: grid;
+  grid-template-columns: minmax(300px, 637px) minmax(300px, 443px);
+  grid-template-rows: minmax(auto, 1fr);
+  grid-column-gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .about__row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about__video {
+    margin-bottom: 30px;
+  }
+}
+.about__text p {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: $text;
+  margin-bottom: 27px;
+}
+.slider__btn {
+}
+.about__video {
+}
+
+.videwrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.videoblok {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0px 13px 24px 0px rgba(0, 0, 1, 0.41);
+}
+.videoblok iframe,
+object,
+embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

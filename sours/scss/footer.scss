@@ -1,0 +1,122 @@
+.footer {
+  background-color: $black;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include adaptiv-value("padding-top", 60, 35, 1);
+  @include adaptiv-value("padding-bottom", 60, 30, 1);
+}
+
+.footer__blok {
+  display: flex;
+  max-width: 745px;
+  justify-content: space-between;
+}
+.footer__icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__icon {
+  width: 282px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer__link-blolk {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: #3d3d3c;
+  transition: all 0.2s linear;
+}
+.footer__link-blolk:hover {
+  background-color: #b88b58;
+}
+.footer_link {
+  display: block;
+  width: 33px;
+  height: 33px;
+}
+.footer_link-1 {
+  background: url("../img/icons/twitter_icon_1333.png") center no-repeat;
+}
+.footer_link-2 {
+  background: url("../img/icons/instagram_icon_1401.png") center no-repeat;
+}
+.footer_link-3 {
+  background: url("../img/icons/linkedin_icon_1325.png") center no-repeat;
+}
+.footer_link-4 {
+  background: url("../img/icons/facebook_icon_1321.png") center no-repeat;
+}
+.footer_link-5 {
+  background: url("../img/icons/youtube_icon_1317.png") center no-repeat;
+}
+.footer_link-6 {
+  background: url("../img/icons/google_plus_1313.png") center no-repeat;
+}
+.footer_link-7 {
+  background: url("../img/icons/other_icon_1309.png") center no-repeat;
+}
+.footer_link-8 {
+}
+.footer_link-9 {
+}
+.footer__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: $white;
+}
+.footer__item {
+  max-width: 370px;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: $white;
+}
+.footer__call-p {
+  position: relative;
+  z-index: 1;
+  margin-top: -90px;
+}
+
+.footer__call-blok {
+  max-width: 1420px;
+  margin: 0 auto;
+  height: 1px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+.footer__call {
+  display: flex;
+  justify-content: flex-end;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: $chocolate;
+  transition: all 0.2s linear;
+  @include adaptiv-value(" margin-top", -90, -65, 1);
+  cursor: pointer;
+}
+
+.footer__call:hover {
+  background-color: darken($chocolate, 10%);
+}
+.footer__call div {
+  width: 65px;
+  height: 65px;
+  background: url("../img/scrollup_1176.png") 50% no-repeat;
+}
+
+@media (max-width: 696px) {
+  .footer__blok {
+    flex-direction: column-reverse;
+  }
+  .footer__item {
+    margin-bottom: 20px;
+  }
+  .footer__icon {
+    margin-bottom: 20px;
+  }
+}
